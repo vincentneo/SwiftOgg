@@ -1,4 +1,4 @@
-// swift-tools-version: 5.8
+// swift-tools-version: 5.5
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -47,7 +47,8 @@ let package = Package(
             publicHeadersPath: "include",
             cSettings: [
                 // silence "Implicit conversion loses integer precision" warning.
-                .unsafeFlags(["-w"])
+                // (does not work well for SPM version releases, hence commented out)
+                // .unsafeFlags(["-w"])
             ])
     ]
 )
